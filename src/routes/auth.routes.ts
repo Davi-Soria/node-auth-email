@@ -1,11 +1,11 @@
-import { Router} from "express";
-import * as authController from "../controller/auth.controller.ts";
+import { register, verifyCode, login } from "../controller/auth.controller";
+import { Router } from "express";
 
 const router = Router();
 
-router.post("/register", authController.register);
-router.post("/verify", authController.verifyCode);
-router.post("/login", authController.login);
+router.post("/register", register);
+router.post("/verify", verifyCode);
+router.post("/login", login);
 
 
 export default router
