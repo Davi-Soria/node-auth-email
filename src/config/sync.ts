@@ -8,6 +8,9 @@ export const syncDatabase = async () =>  {
         
         await sequelize.sync({alter: true});
         console.log('Tabelas sincronizadas');
+
+        const [results] = await sequelize.query("SELECT * FROM users");
+        console.log("Conteúdo da tabela users", results);
     } catch(error) {
         console.error('Erro ao conectar/sincronizar o banco', error);
     }
