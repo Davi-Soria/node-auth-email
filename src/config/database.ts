@@ -16,9 +16,9 @@ export const sequelize = new Sequelize(
 
 sequelize.authenticate()
   .then(() => {
-    console.log("🟢 Conectado ao banco com sucesso!");
-    console.log(`📛 Banco: ${process.env.DB_NAME}`);
+    console.log("Conectado ao banco com sucesso!");
+    console.log(`Banco: ${process.env.DB_NAME}`);
   })
   .catch((err) => {
-    console.error("🔴 Erro ao conectar ao banco:", err);
+    console.error("Erro ao conectar ao banco:", err);
   });
